@@ -40,10 +40,8 @@ function Product({id,title,image,price,rating}) {
                         .map((_,i)=>(
                         <p>⭐</p>
                         ))}
-
-
                 </div>
-
+                <button>Remove from Basket</button>
 
             </div>
             <img className="lean" src={image}

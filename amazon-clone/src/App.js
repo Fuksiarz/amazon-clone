@@ -11,7 +11,12 @@ function App() {
             <div className="App">
                 <Routes>
                     <Route path="/checkout" element={<><Header/><Checkout/></>}/>
+                    <Route element={
+                        <>
 
+
+                        </>
+                    }/>
                     <Route path="" element={<><Header/><Home/></>}/>
 
                 </Routes>
