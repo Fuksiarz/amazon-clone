@@ -1,4 +1,3 @@
-import React, {useState} from 'react';
 import CurrencyFormat from "react-currency-format";
 import "./Subtotal.css"
 import {useStateValue} from "./StateProvider";

@@ -1,15 +1,25 @@
 import React from 'react';
 import './Header.css'
+import { useState } from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import {useStateValue} from "./StateProvider";
+import { auth } from './Firebase';
 
 function Header() {
 
-    const [{basket},dispatch] = useStateValue();
-
-
+    const [{basket, user},dispatch] = useStateValue();
+    const [usernow,setUsernow]=useState(auth.currentUser);
+    const handleAuthentication = ()=>{
+        if(!user){
+            
+            auth.signOut();
+            auth.currentUser=null;
+        }
+          
+    }
+    
     return (
         <div className="header">
             <Link to="/">
@@ -30,17 +40,21 @@ function Header() {
 
             </div>
 
-            <div className="nav">
-                <Link to="/login">
-                <div className='header__option'>
+            <div    
+                    className="nav">
+                <Link   to={!auth.currentUser&&"/login"}onClick={handleAuthentication}
+                        >
+                <div    
+                        className='header__option'>
                     <span className='header__optionLineOne'>
-                        hello Guest
+                        hello {user}
                     </span>
                     <span className='header__optionLineTwo'>
-                        Sign In
+                        {auth.currentUser?'Sign Out':'Sign In'}
                     </span>
                 </div>
                 </Link>
+                
                 <div className='header__option'>
                     <span className='header__optionLineOne'>
                        Returns

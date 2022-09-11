@@ -8,9 +8,6 @@ function Checkout() {
     const [{basket}, dispatch] = useStateValue();
 
 
-
-
-
     return (
         <div className="checkout">
             <div className="checkout_left">

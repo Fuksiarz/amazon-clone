@@ -14,6 +14,9 @@
     padding-top: 11px;
 
 }
+.test {
+    color: #cd9042;
+}
 .header__search{
     display:flex;
     flex:1;
