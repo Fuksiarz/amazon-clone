@@ -38,7 +38,7 @@ function Product({id,title,image,price,rating}) {
                         <p>⭐</p>
                         ))}
                 </div>
-                <button>Remove from Basket</button>
+                
 
             </div>
             <img className="lean" src={image}

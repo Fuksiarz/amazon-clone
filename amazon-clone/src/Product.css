@@ -12,6 +12,10 @@
     max-width: 300px;
     background-color: white;
     z-index: 1;
+    
+}
+.setOfProducts{
+    border-bottom:1px solid red;
 }
 
 .product > img {

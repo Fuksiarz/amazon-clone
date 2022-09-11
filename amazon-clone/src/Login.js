@@ -40,7 +40,7 @@ function Login() {
             <Link to="/">
                 <img
                     className="login_logo"
-                    src="https://thumbs.dreamstime.com/b/simple-vector-filled-flat-amazon-icon-logo-solid-black-pictogram-isolated-white-background-amazon-logo-159029074.jpg"/>
+                    src="https://thumbs.dreamstime.com/b/amazon-155631949.jpg"/>
             </Link>
 
             <div className='login_container'>

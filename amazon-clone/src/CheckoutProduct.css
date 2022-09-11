@@ -1,13 +1,15 @@
+
 .checkoutProduct{
     display:flex;
     margin-top:20px;
     margin-bottom: 20px;
+    
 }
-.checkoutProduct_info{
+.checkoutProduct__info{
     padding-left: 20px;
 
 }
-.checkoutProduct_info >button{
+.checkoutProduct__info >button{
     background: #f0c14b;
     border: 1px solid;
     margin-top:10px;
@@ -15,15 +17,17 @@
     color:#111;
 }
 
-.checkoutProduct_image{
+.checkoutProduct__image{
     object-fit:contain;
     width:180px;
     height:180px;
 }
-.checkoutProduct_rating{
+.checkoutProduct__rating{
     display:flex;
 }
-.checkoutProduct_title{
+.checkoutProduct__title{
     font-size: 17px;
     font-weight: 800;
 }
+
+

@@ -47,7 +47,7 @@ function Header() {
                 <div    
                         className='header__option'>
                     <span className='header__optionLineOne'>
-                        hello {user}
+                        hello {auth.currentUser?.email}
                     </span>
                     <span className='header__optionLineTwo'>
                         {auth.currentUser?'Sign Out':'Sign In'}
@@ -75,8 +75,9 @@ function Header() {
                 <div>
                    <div className="header__optionBasket">
                        <ShoppingBasketIcon/>
-                       <span className="header__optionLineTwo" classname="header__basketCount">
+                       <span className="header__optionLineTwo"><span className="header__basketCount" >
                         {basket?.length}
+                        </span>
                     </span>
                    </div>
                 </div>

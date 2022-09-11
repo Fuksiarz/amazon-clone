@@ -4,22 +4,28 @@
     background-color: white;
     height: max-content;
     width:100%;
-    border: 3px red solid;
+   border-bottom: 1px solid lightgray;
 }
+
 .checkout_title{
     margin-right: 10px;
     padding:10px;
     border-bottom: 1px solid lightgray;
 }
-
-.basketList{
+.checkout_left{
+    width:100%;
+}
+/* .basketList{
 
     width: 100%;
     text-align: center;
     padding: 15px;
     border-radius: 3px;
-    border:3px solid #111111;
+    
 
+}
+.basketList :not(:last-child){
+    border:1px solid lightgray;
 }
 .basketList img {
     max-width: 100%;
@@ -30,11 +36,11 @@
 }
 .basketList h2{
     font-size:15px;
-}
+} */
 .checkout_right{
-    width:100%;
-    align-items: center;
-    border:3px blue solid;
+    width:30%;
+    padding-left:6px;
+    border-left: 3px solid lightgray;
 }
 
 /*.checkout_ad{*/

@@ -3,9 +3,10 @@ import "./Checkout.css";
 import Subtotal from "./Subtotal";
 import {useStateValue} from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
+import { auth } from './Firebase';
 
 function Checkout() {
-    const [{basket}, dispatch] = useStateValue();
+    const [{basket,user}, dispatch] = useStateValue();
 
 
     return (
@@ -15,17 +16,22 @@ function Checkout() {
                 {/*     alt=""/>*/}
 
 
-                <div>
+                <div >
+                    <h3>hello {auth.currentUser?.email}</h3>
                     <h2 className="checkout_title"> Your shopping Basket </h2>
+                    
                     {basket.map(item=>(
+                        <div className='boss'>
                         <CheckoutProduct
                             id={item.id}
-                            title={item.title}
+                            title= {item.title}
                             image={item.image}
                             price={item.price}
                             rating={item.rating}
                         />
+                        </div>
                     ))}
+                    
                 </div>
 
             </div>
